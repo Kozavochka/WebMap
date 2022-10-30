@@ -1,0 +1,32 @@
+header{
+    height: 80px;
+    background-color: #e52b50 ;
+    border-bottom: 1px double #C0C0C0;
+    font-size: 24px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header>div{
+    margin: auto;
+}
+
+main{
+    width: 100%;
+    min-height: 800px;
+    border: 1px solid black;
+}
+footer{
+    width: 100%;
+    min-height:150px;
+    border: 1px solid yellow;
+}
+
+@media (max-width: 1000px) {
+    header{
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+}
