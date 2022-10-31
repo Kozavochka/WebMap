@@ -5,20 +5,62 @@
     <meta name="description" content="Интерактивная карта ВДНХ"/>
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
     <title>Интерактивная карта</title>
-    <link rel="stylesheet" href="/css/null.css">
-    <link rel="stylesheet" href="/css/main.css">
-
+    <link rel="stylesheet" type="text/css" href="css/header.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/Accordion_css.css">
+    <link rel="stylesheet" type="text/css" href="css/footer.css">
+   <!-- <script src="/js/Accordion.js"></script>-->
 </head>
 <body>
 <header>
-    <div>
-        <p>Интерактивная карта ВДНХ</p>
+    <div class = "header">
+        <a class = "logo"></a>
+        <div class = "head-menu">
+            <a href="#">События</a>
+            <a href="#">Экскурсии</a>
+            <a href="#">Посетителям</a>
+            <a href="#">Билеты</a>
+            <a href="#">Новости</a>
+            <a href="#">Контакты</a>
+            <a href="#">Карта</a>
+            <a href="#">Ещё...</a>
+        </div>
     </div>
+
 </header>
 
 
+
 <main class="container">
-    <div class="main"><h1>Карта</h1></div>
+    <div class="main">
+        <div class="mapbox">
+        </div>
+    </div>
+
+    <div class="div_accordion">
+        <button class="accordion">Построение маршрута</button>
+        <div class="panel">
+            <p>Блок</p>
+        </div>
+    </div>
+<!-- У меня чет не пашит если здесь не подключать, мб чет не так делаю. Глаза замылились уже, в падлу разбираться )0)-->
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                }
+            });
+        }
+    </script>
+
 </main>
 
 
@@ -26,7 +68,7 @@
     <div class="top-footer">
         <!-- Лого -->
         <section class="s-logo">
-            <p>E(co2)de</p>
+            <p>4code</p>
         </section>
         <!-- Навигация -->
         <section class="s-nav">
