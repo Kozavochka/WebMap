@@ -1,29 +1,24 @@
-
-
-
 .container {
     display: flex;
     flex-wrap: wrap;
     min-height: 800px;
     border: 1px solid red;
+    position: relative;
 }
-.main {
+
+.main{
+    margin-top: 10px;
+    margin-bottom: 10px;
+   /* position:static;*/ /* Эт нужно убрать наверное, чтобы другой блок выпадал*/
+    background: #FFFFFF;
+    box-shadow: 0px 0px 12px rgb(0 0 0 / 4%), 0px 12px 12px rgb(0 0 0 / 4%);
+    border-radius: 4px;
     width: 100%;
-    min-height: 1px;
-    text-align: right;
+    min-height: 80px;
+    /*z-index: 100;*/ /* Эт тоже мешает блоку выпадать по моему*/
 }
-@media (min-width: 1000px) {
-    .main {
-        flex: 0 0 66.666667%;
-        max-width: 66.666667%;
-        order: 2;
-    }
-}
-@media (min-width: 1000px) {
-    .main {
-        flex: 0 0 75%;
-        max-width: 75%;
-    }
-}
+
+
+
 
 
